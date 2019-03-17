@@ -1,0 +1,26 @@
+<%- include('./includes/Head.ejs') %>
+<link rel="stylesheet" href="/CSS/main.css">
+<body>
+<%- include('./includes/Navigation.ejs') %>
+
+<div class = "container" >
+<h1> CodeGIG </h1>
+<h6><i>Destination for finding Tech Jobs.</i></h6>
+  <div class="row">
+    <form class="col s12" method = "POST" action = "/search">
+      <div class="row">
+        <div class="input-field col s12 row">
+          <i class="material-icons prefix">search</i>
+          <input placeholder="Javascript, php, Ruby, Java..." id="first_name" type="text" class="validate" name = "search">
+          <button class="waves-effect waves-light btn purple">Search</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<script src = "../js/main.js"></script>
+
+</body>
+<%- include('./includes/Footer.ejs') %>
+
+

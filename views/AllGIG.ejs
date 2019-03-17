@@ -1,0 +1,42 @@
+<%- include('./includes/Head.ejs') %>
+<link rel="stylesheet" href="/CSS/main.css" />
+<body>
+  <%- include('./includes/Navigation.ejs') %>
+
+  <div class="container">
+  <% if(gigs.length > 0) { %>
+    <div class="row">
+      <% for(gig of gigs) { %>
+      <div class="col s12 m6">
+        <div class="card  blue-grey lighten-2">
+          <div class="card-content white-text">
+            <span class="card-title"><u><%= gig.gigname %></u></span
+            ><br />
+            <p>
+              <span class="gigs-detail">Description: </span><%= gig.description
+              %>
+            </p>
+            <p>
+              <span class="gigs-detail">Technology Stack needed: </span><%=
+              gig.technologies %>
+            </p>
+            <hr />
+            <p><span class="gigs-detail">Budget: </span>$<%= gig.budget %></p>
+            <hr />
+            <p>
+              <span class="gigs-detail">Posted at: </span><%= gig.createdAt %>
+            </p>
+          </div>
+          <div class="card-action">
+            <a href="mailto: <%=  gig.contactEmail %> ">APPLY</a>
+          </div>
+        </div>
+      </div>
+      <% } %>
+    </div>
+    <% } else { %>
+    <p>No GIG Found!!</p>
+    <% } %>
+  </div>
+</body>
+<%- include('./includes/Footer.ejs') %>

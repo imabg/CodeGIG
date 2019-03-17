@@ -1,0 +1,54 @@
+<%- include('./includes/Head.ejs') %>
+<%- include('./includes/Head.ejs') %>
+<link rel="stylesheet" href="/CSS/main.css">
+
+<body>
+
+<%- include('./includes/Navigation.ejs') %>
+
+<div class="container" >
+    <blockquote>
+        <h1> Add New GIG! </h1>
+    </blockquote>
+     <div class="row">
+    <form class="col s12" method = "POST" action = "/save">
+      <div class="row">
+        <div class="input-field col s12 ">
+          <input  id="first_name" placeholder = "Eg: React Developer, AWS Certified Dev" type="text" class="validate" name = "gigname">
+          <label for="first_name">GIG Title</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="last_name" type="text" placeholder = "Javascript, Java, Vue.js.." class="validate" name = "technologies">
+          <label for="last_name" >Technologies Needed</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password" placeholder = "Eg: 5000, 10000.."type="number" class="validate" name = "budget">
+          <label for="password">Budget</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="row">
+            <div class="input-field col s12">
+            <textarea id="textarea1" class="materialize-textarea" rows="3" required name="body"></textarea>
+            <label for="textarea1">Description</label>
+            </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate" name = "email">
+          <label for="email">Contact Email</label>
+        </div>
+      </div>
+      </div>
+      <button class="waves-effect waves-light btn purple"> Submit </button>
+    </form>
+  </div>
+</div>
+        
+
+
+</body>
+<%- include('./includes/Footer.ejs') %>
