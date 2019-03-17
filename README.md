@@ -1,3 +1,3 @@
 # CodeGIG
 
-## Change uitl/database.js according to your Database Config.
+### Change util/database.js according to your Database Config.
